@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class SimpleMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private float SpeedFactor = 1f;
+
+
+        void Start()
     {
         Debug.Log("oi");
     }
 
-    // Update is called once per frame
-    void Update()
+        void Update()
     {
         transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
     }
