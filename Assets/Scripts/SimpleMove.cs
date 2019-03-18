@@ -10,11 +10,13 @@ public class SimpleMove : MonoBehaviour
 
         void Start()
     {
-        Debug.Log("oi");
+               
     }
 
         void Update()
     {
-        transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+        float So = transform.position.x;
+        float S = So + SpeedFactor * Time.deltaTime;
+        transform.position = new Vector3(S, transform.position.y, transform.position.z);
     }
 }
