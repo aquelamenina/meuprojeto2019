@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSFX:
     coinPickup: {fileID: 8300000, guid: 2b1ae2db7cac637459368e3f38d8e3da, type: 3}
+    fail: {fileID: 8300000, guid: c5fc55691d325d5469e384cc1059b099, type: 3}
 --- !u!1001 &147625162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2426,7 +2427,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedFactor: 10
-  Rb: {fileID: 0}
 --- !u!70 &1332555766
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
