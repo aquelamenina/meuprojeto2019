@@ -11,7 +11,7 @@ public class ProjectileSpawn : MonoBehaviour
 
     public float waitTime = 3f;
 
-    public float prejectileSpeed = 3f;
+    public float projectileSpeed = 3f;
 
     public Vector3[] directions;  
 
@@ -22,12 +22,13 @@ public class ProjectileSpawn : MonoBehaviour
     void Start()
     {
         parent = GameObject.Find("Tape");
+        StartCoroutine(Spawn());
     }
     
      IEnumerator  Spawn () {
         while(true) {
             yield return new WaitForSeconds(waitTime);
-            for(int i=0; i<directions.Lenght; i++) {
+            for(int i=0; i<directions.Length; i++) {
                GameObject projectile = Instantiate(prefab, spawnPoint.transform.position, Quaternion.identity);
                projectile.transform.SetParent(parent.transform);
                projectile.GetComponent<Rigidbody2D>().velocity = projectileSpeed * directions[i];

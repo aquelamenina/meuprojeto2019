@@ -6,7 +6,7 @@ public class MovebyRigidBody : MonoBehaviour
 {
     [SerializeField]
     private float SpeedFactor = 10f;
-    [SerializeField]
+    
     private Rigidbody2D Rb;
     void Start()
     {
